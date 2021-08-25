@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=UTF-8">
+    
+    <meta name="author" content="Jana Entrekin">
+    <meta name="description" content="A visual representation of data correlation ">
+    <title>DATAZATION</title>
+    <!-- <link rel="icon" type="image/png" href="https://turing.cs.olemiss.edu/~jcentrek/SENIOR_PROJ/SeniorProjectFinal/img/icon.png"> -->
+    <!--css stylization-->
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(177, 177, 177);
+        }
+        nav{
+            width: 150px;
+            position:sticky;
+            left: 10px;
+            top: 10px;
+        }
+        nav a{
+            background-color: rgba(156, 183, 235);
+            color: rgb(235, 235, 235);
+            font-family: 'Aldrich';font-size: 15px;
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: rgb(31, 69, 151);
+        }
+        header{
+            color:rgb(31, 69, 151);
+            font-family: 'Aldrich';font-size: 22px;
+            position: absolute;
+            right:5px;
+            top:0px;
+        }
+        img.a{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h2{
+            color:rgb(31, 69, 151);
+            font-family: 'Aldrich';font-size: 20px;
+            text-align:center;
+        }
+        p{
+            color:rgb(54, 54, 54);
+            font-family: 'Aldrich';font-size: 22px;
+            text-align:center;
+            padding: 15px;
+        }
+        h1{
+            color:rgb(31, 69, 151);
+            font-family: 'Aldrich';font-size: 28px;
+            text-align:center;
+            padding: 30px;
+        }
+        iframe{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+        }
+        .column{
+            float: right;
+            width: 33.33%;
+            padding: 5px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        h4{
+            text-align: right;
+            color:rgb(31, 69, 151);
+            font-family: 'Aldrich';font-size: 28px;
+        }
+        h3{
+            text-align: right;
+            color:rgb(44, 53, 71);
+            font-family: 'Aldrich';font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <!--header(title and breif explanation)-->
+    <header>
+        <h4>DATAZATION</h4>
+        <h3>
+            Jana Entrekin <br />
+            A simplified data visualization and interaction of the <br />
+            correlation between fertility and GDP in North America.
+        </h3>
+    </header>
+    <!--navigation side bar-->
+    <nav>
+            <a href="#CA">FERTILITY &amp; GDP(CA)</a>
+            <a href="#MX">FERTILITY &amp; GDP(MX)</a>
+            <a href="#US">FERTILITY &amp; GDP(US)</a>
+            <a href="#countryCor">CORRELATION</a>
+            <a href="#interact">INTERACTIVE</a>
+    </nav>
+
+    <div id="CA">
+        <h1>
+            Canada(1800-2040)
+        </h1>
+    </div>
+    <!--code for CA GDP and Fertility over 240 years and explanation of graphs-->
+    <div class="row">
+        <div class="column">
+            <img class="a" src="GDPCA.jpeg" alt="graph of GDP and years for Canada" style="width:100%">
+        </div>
+        <div class="column">
+            <img class="a" src="FertCA.jpeg" alt="graph of fertility and years for Canada" style="width:100%">
+        </div>
+        <div class="column">
+            <p>
+                The graph on the left shows that as time progresses the fertility rate in Canada has decreased from 5.72 to 1.63.
+            </p>
+            <p>
+                The graph on the right shows that as time progresses the GDP in Canada has increased from 1,310 to 60,500.
+            </p>
+        </div>
+    </div>
+
+    <div id="MX">
+        <h1>
+            Mexico(1800-2040)
+        </h1>
+    </div>
+    <!--code for MX GDP and Fertility over 240 years and explanation of graphs-->
+    <div class="row">
+        <div class="column">
+            <img class="a" src="GDPMX.jpeg" alt="graph of GDP and years for Mexico" style="width:100%">
+        </div>
+        <div class="column">
+            <img class="a" src="FertMX.jpeg" alt="graph of fertility and years for Mexico" style="width:100%">
+        </div>
+        <div class="column">
+            <p>
+                The graph on the left shows that as time progresses the fertility rate in Mexico has decreased from 6.8 to 1.74.
+            </p>
+            <p>
+                The graph on the right shows that as time progresses the GDP in Mexico has increased from 1,560 to 25,800.
+            </p>
+        </div>
+    </div>
+
+    <div id="US">
+        <h1>
+            The United States(1800-2040)
+        </h1>
+    </div>
+    <!--code for US GDP and Fertility over 240 years and explanation of graphs-->
+    <div class="row">
+        <div class="column">
+            <img class="a" src="GDPUS.jpeg" alt="graph of GDP and years for United States" style="width:100%">
+        </div>
+        <div class="column">
+                <img class="a" src="FertUS.jpeg" alt="graph of fertility and years for United States" style="width:100%">
+        </div>
+        <div class="column">
+            <p>
+                The graph on the left shows that as time progresses the fertility rate in the United States has decreased from 7.03 to 1.91.
+            </p>
+            <p>
+                The graph on the right shows that as time progresses the GDP in the United States has increased from 1,980 to 80,000.
+            </p>
+        </div>
+    </div>
+
+    <div id="countryCor">
+        <h1>
+            Correlation between GDP and fertility in North America
+        </h1>
+        <h2>
+            (Canada, Mexico, and The United States)
+        </h2>
+    </div>
+    <!--code for individual country correlation between fertility and income over 240 years-->
+    <div class="row">
+        <div class="column">
+            <img class="a" src="USincxfert.jpeg" alt="graph of fertility and income for United States" style="width:100%">
+        </div>
+        <div class="column">
+            <img class="a" src="MXincxfert.jpeg" alt="graph of fertility and income for Mexico" style="width:100%">
+        </div>
+        <div class="column">
+            <img class="a" src="CAincxfert.jpeg" alt="graph of fertility and income for Canada" style="width:100%">
+        </div>
+    </div>
+    <div id="interact"> 
+        <h1>
+            Interaction
+        </h1>
+    </div>
+    <!--code for rgl link interaction-->
+    <div> 
+        <!--code for future implementation of shiny application-->
+        <!--<iframe src="https://jcentrek.shinyapps.io/Test1/" height="800" width="900" style="border:none;"></iframe>-->
+        <!--make sure to change src link for individual folder before pushing-->
+        <iframe src="rgl.html" height="650" width="1030" style="border:none;" alt="interactive 3 axis graph of fertility and income correlation between Canada, Mexico, and United States"></iframe>
+    </div>
+   
+
+</body></html>
